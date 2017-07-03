@@ -43,3 +43,6 @@ main = do
 -- test whether a name appears in a AddressBook and returning a Boolean value
 	log("--test whether a name appears in a AddressBook and returning a Boolean value--")
 	logShow (null mybook2)
+-- test whether a name appears in a AddressBook and returning a Boolean value
+	log("--test whether a name appears in a AddressBook and returning a Boolean value--")
+	logShow (null mybook2)

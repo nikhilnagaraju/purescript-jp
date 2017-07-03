@@ -3,9 +3,9 @@ module Data.AddressBook where
 import Prelude
 
 import Control.Plus (empty)
-import Data.List (List(..), filter, head)
+import Data.List (List(..), filter, head, tail, null)
 import Data.Maybe (Maybe)
-
+import Partial.Unsafe
 type Address =
   { street :: String
   , city   :: String
@@ -43,3 +43,7 @@ findStreet street book = head $ filter filterEntry book
 	where
 	filterEntry :: Entry -> Boolean
 	filterEntry entry = entry.address.street == street
+
+-- showBook :: AddressBook -> String
+-- showBook book = 
+--   (showEntry $ (\x-> if null x then empty else head x) book) <> (showBook $ (\x-> if null x then empty else tail x) book)
